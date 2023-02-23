@@ -10,14 +10,22 @@ package metodusok;
  */
 public class Metodusok {
 
-    public static void main(String[] args, int osszeg) {
-        String kimenet ="Elso 10 szam osszege:"+elso10szamosszege();
-        kiir(kimenet);
+    public static void main() {
+         int osszeg= elso10();
+       String kimenet = "az elso 10 szám osszege: "+osszeg+ "\n";
+       kiir(kimenet);
+       
+       int szam1 = 7, szam2=4;
+       osszeg = osszead(szam1,szam2);
+       kiir("%d + %d = %d\n.".formatted(szam1,szam2,osszeg));
+        osszeg =osszead(1, 2);
+        osszeg =osszead(osszeg, 3);
+        osszeg =osszead(osszeg, 4);
+        kiir("1+2+3+4="+osszeg+"\n");
+      
         
         
-        int szam1 =4, szam2= 5;
-        osszeg = osszead(szam1,szam2);
-        kiir("%d +%+d = %d\n".formatted(szam1,szam2,osszeg));
+       
     }
     public static int elso10szamosszege() {
       int osszeg = 0;
