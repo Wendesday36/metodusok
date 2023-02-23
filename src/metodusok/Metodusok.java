@@ -11,7 +11,20 @@ package metodusok;
 public class Metodusok {
 
     public static void main() {
-         int osszeg= elso10();
+         
+      feladatok();
+        
+        
+      
+       
+    }
+    
+    public static void feladatok(){
+        feladat1();
+        feladat2();
+    }
+    public static void feladat1(){
+        int osszeg= elso10szamosszege();
        String kimenet = "az elso 10 szám osszege: "+osszeg+ "\n";
        kiir(kimenet);
        
@@ -22,11 +35,18 @@ public class Metodusok {
         osszeg =osszead(osszeg, 3);
         osszeg =osszead(osszeg, 4);
         kiir("1+2+3+4="+osszeg+"\n");
-      
-        
-        
-       
     }
+    public static void feladat2(){
+        feladat1();
+        double gyok;
+        int osszeg = osszead(7,5);
+        osszeg = osszead(osszeg,4);
+        gyok = Math.sqrt(osszeg);
+       
+        kiir("7+5+4 gyoke ="+gyok);
+    }
+    
+    
     public static int elso10szamosszege() {
       int osszeg = 0;
         for (int i = 0; i < 10; i++) {
